@@ -1,0 +1,18 @@
+{{!-- библиотека принимает миссив обьектов к перебору в this хранит итерируемый объект массива
+и раструшивает свойтсва каждого объекта из массива
+в прописанные нами элементы --}}
+{{#each this}}
+<li class="menu__item">
+    <img src="{{image}}" alt="{{name}}" class="card__image">
+  <div class="card__content">
+    <h2 class="card__name">{{name}}</h2>
+    <p class="card__price">{{price}}</p>
+  <p class="card__descr">{{description}}</p>
+  <ul class="tag-list">
+      {{#each ingredients}}
+    <li class="tag-list__item">{{this}}</li>
+      {{/each}}
+  </ul>
+  </div>
+</li>
+{{/each}}
